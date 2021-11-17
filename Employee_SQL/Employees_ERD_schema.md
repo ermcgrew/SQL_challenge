@@ -36,7 +36,7 @@ hire_date VARCHAR(10)
 
 salaries
 -
-emp_no FK - employees.emp_no
+emp_no PK FK - employees.emp_no
     #each employee will have one salary
     #each salary row will only have one employee
 salary 
