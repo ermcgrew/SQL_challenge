@@ -54,3 +54,16 @@ OR dept_name = 'Development';
 SELECT last_name, COUNT(last_name) AS shared_by_number FROM employees
 GROUP BY last_name
 ORDER BY shared_by_number DESC;
+
+--id number 499942
+SELECT e.emp_no, e.last_name, e.first_name, e.hire_date, d.dept_name, s.salary, t.title FROM employees as e
+	INNER JOIN titles as t
+	ON t.title_id = e.emp_title_id	
+		INNER JOIN salaries as s 
+		ON s.emp_no = e.emp_no
+			INNER JOIN dept_emp as de
+			ON de.emp_no = e.emp_no
+					INNER JOIN departments as d
+					ON d.dept_no = de.dept_no
+WHERE e.emp_no = 499942;
+--April Foolsday, cute...
