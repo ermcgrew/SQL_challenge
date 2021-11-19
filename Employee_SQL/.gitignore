@@ -1,2 +1,2 @@
-#database connection
-conn_string = 'postgresql+psycopg2://postgres:postgres@localhost:5432/employees'
+#for database connection
+config.py
